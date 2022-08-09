@@ -15,6 +15,11 @@ public class EventTracker implements Tracker {
         return EventTracker.INSTANCE;
     }
 
+    @Override
+    public Map<String, Integer> tracker() {
+        return null;
+    }
+
     synchronized public void push(String message) {
         if (tracker.containsKey(message)) {
             tracker.put(message, tracker.get(message) + 1);
@@ -32,7 +37,6 @@ public class EventTracker implements Tracker {
         }
         return false;
     }
-
     synchronized public void handle(String message, EventHandler e) {
         e.handle();
         tracker.put(message, tracker.get(message) - 1);

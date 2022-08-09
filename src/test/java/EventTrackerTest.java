@@ -24,17 +24,17 @@ public class EventTrackerTest {
         Assert.assertEquals(Integer.valueOf(1), testList.get("test"));
     }
 
-    @Test
-    public void tracker() {
-        HashMap<String, Integer> testList = new HashMap<>();
-
-        EventTracker eventTracker = new EventTracker(testList);
-
-        eventTracker.push("test");
-
-        Assert.assertEquals(testList, eventTracker.tracker());
-
-    }
+//    @Test
+//    public void tracker() {
+//        HashMap<String, Integer> testList = new HashMap<>();
+//
+//        EventTracker eventTracker = new EventTracker(testList);
+//
+//        eventTracker.push("test");
+//
+//        Assert.assertEquals(testList, eventTracker.tracker());
+//
+//    }
 
     @Test
     public void has() {
